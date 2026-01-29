@@ -75,14 +75,14 @@ cd tasks
 ### 2. Restore Backend Dependencies
 
 ```bash
-cd Tasks.WebApp
+cd "<your-solution-path>\Tasks.WebApp"
 dotnet restore
 ```
 
 ### 3. Install Frontend Dependencies
 
 ```bash
-cd Tasks.WebApp/ClientApp
+cd "<your-solution-path>\Tasks.WebApp\ClientApp"
 npm install
 ```
 
@@ -93,14 +93,14 @@ npm install
 ### Start the Backend API (Terminal 1)
 
 ```bash
-cd Tasks.WebApp
+cd "<your-solution-path>\Tasks.WebApp"
 dotnet run
 ```
 
 ### Start the Vue Frontend (Terminal 2)
 
 ```bash
-cd Tasks.WebApp/ClientApp
+cd "<your-solution-path>\Tasks.WebApp\ClientApp"
 npm run dev
 ```
 
@@ -121,7 +121,7 @@ npm run dev
 Ensure the API is running first, then in a new terminal:
 
 ```bash
-cd Tasks.ApiTester
+cd "<your-solution-path>\Tasks.ApiTester"
 dotnet run
 ```
 
@@ -136,7 +136,7 @@ The test suite covers:
 ### Frontend Unit Tests
 
 ```bash
-cd Tasks.WebApp/ClientApp
+cd "<your-solution-path>\Tasks.WebApp\ClientApp"
 npm run test:unit -- --run
 ```
 
