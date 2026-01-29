@@ -154,8 +154,20 @@ Content-Type: application/json
 ### Filtering & Sorting
 
 ```http
-GET /api/tasks?status=InProgress&sortBy=priority&sortDescending=true&page=1&pageSize=10
+GET /api/tasks?status=InProgress&sortBy=priority&sortDirection=desc&page=1&pageSize=10
 ```
+
+**Available Filter Parameters:**
+| Parameter | Type | Description |
+|-----------|------|-------------|
+| `status` | string | Filter by status: `Todo`, `InProgress`, `Done` |
+| `titleSearch` | string | Filter by title substring (case-insensitive) |
+| `minPriority` | int | Minimum priority filter (inclusive) |
+| `maxPriority` | int | Maximum priority filter (inclusive) |
+| `sortBy` | string | Sort field: `priority`, `duedate`, `created`, `updated`, `title`, `sortorder` |
+| `sortDirection` | string | Sort direction: `asc` or `desc` |
+| `page` | int | Page number (1-based, default: 1) |
+| `pageSize` | int | Items per page (1-100, default: 20) |
 
 ---
 

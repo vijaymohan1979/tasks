@@ -56,7 +56,7 @@ With a reduced scope, I will start with the following assumptions:
 |-------|-------------|
 | **Database Schema** | SQLite database structure |
 | **EF-Core Entities** | Entity Framework Core data models |
-| **DTO Layer** | Mirrors EF Core, used to communicate with the backend service layer |
+| **DTO Layer** | Request/Response contracts used to communicate between API, service, and data layers |
 | **DAL Layer** | Uses EF-Core and returns DTOs to the backend service layer |
 
 **Design Principles:**
@@ -162,9 +162,9 @@ Contracts are first-class citizens. DTOs represent the business domain, not infr
 
 | Layer Boundary | DTO Type | Direction |
 |----------------|----------|-----------|
-| API → Service | `CreateTaskDto`, `UpdateTaskDto` | Inbound |
-| Service → API | `TaskDto` | Outbound |
-| Service → Repository | `TaskFilterDto` | Query specs |
+| API → Service | `CreateTaskRequest`, `UpdateTaskRequest` | Inbound |
+| Service → API | `TaskResponse` | Outbound |
+| Service → Repository | `TaskFilterRequest` | Query specs |
 
 #### Validation Strategy
 
@@ -175,7 +175,7 @@ Contracts are first-class citizens. DTOs represent the business domain, not infr
 
 #### Filtering & Sorting
 
-- `TaskFilterDto` encapsulates all query parameters
+- `TaskFilterRequest` encapsulates all query parameters
 - Supports sorting by: priority, duedate, created, updated, title & sortorder
 - Page-based (1-indexed) pagination, max 100 items per page
 - The indexing strategy covers the most common queries

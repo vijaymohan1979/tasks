@@ -13,7 +13,7 @@ namespace Tasks.Models.Validators;
 public class TaskModelValidator
 {
     /// <summary>
-    /// Validates a CreateTaskDto.
+    /// Validates a CreateTaskRequest.
     /// </summary>
     /// <returns>List of validation errors. Empty if valid.</returns>
     public static List<string> ValidateCreate(CreateTaskRequest dto)
@@ -36,7 +36,7 @@ public class TaskModelValidator
     }
 
     /// <summary>
-    /// Validates an UpdateTaskDto.
+    /// Validates an UpdateTaskRequest.
     /// </summary>
     /// <returns>List of validation errors. Empty if valid.</returns>
     public static List<string> ValidateUpdate(UpdateTaskRequest dto)
@@ -69,7 +69,7 @@ public class TaskModelValidator
     }
 
     /// <summary>
-    /// Validates a TaskFilterDto.
+    /// Validates a TaskFilterRequest.
     /// </summary>
     /// <returns>List of validation errors. Empty if valid.</returns>
     public static List<string> ValidateFilter(TaskFilterRequest dto)
