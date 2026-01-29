@@ -185,7 +185,7 @@ GET /api/tasks?status=InProgress&sortBy=priority&sortDirection=desc&page=1&pageS
 - **Why**: Handles caching, background refetching, and cache invalidation automatically.
 - **Benefit**: Eliminates manual cache management; provides consistent loading/error states.
 
-### 4. Service Result Pattern### 4. Service Result Pattern
+### 4. Service Result Pattern
 - **Why**: Consistent error handling without exceptions for expected failures.
 - **Benefit**: Clear distinction between validation errors, not-found, and system errors.
 

@@ -35,9 +35,9 @@ With a reduced scope, I will start with the following assumptions:
 - **Update Task**
 - **Delete Task**
 - **Mark Task as:**
-  - `TODO` (initial state)
-  - `IN PROGRESS`
-  - `DONE`
+  - `Todo` (initial state)
+  - `InProgress`
+  - `Done`
 - **View Tasks**
   - Filtering
   - Sorting
