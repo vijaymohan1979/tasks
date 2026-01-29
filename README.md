@@ -266,5 +266,5 @@ This project was created as a technical assessment demonstration.
 
 ## Author
 
-Built with ❤️ for the Function Health technical assessment.
+Built with ❤️ for a technical assessment.
 
