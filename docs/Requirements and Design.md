@@ -1,12 +1,12 @@
-﻿# Take Home Test Requirements
+﻿# Project Requirements
 
-The technical assessment is to help anyone understand my:
+This project has been implemented to help anyone understand my:
 
 - **Coding Abilities**
 - **Architectural Thinking**
 - **Problem-solving approach**
 
-The high-level requirements are to build a task management app with an API and front-end components.
+The goal is to to build a task management app with an API and front-end components.
 
 ---
 
@@ -28,7 +28,7 @@ Build a small task management API and frontend. Add any features required for a 
 
 ### Assumptions
 
-With a reduced scope, I will start with the following assumptions:
+With a reduced scope (to be time bound), we will start with the following assumptions:
 
 - No authentication
 - **Add Task**
