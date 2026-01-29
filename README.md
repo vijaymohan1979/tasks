@@ -31,7 +31,6 @@ This application provides a complete task management solution with the following
 - **Pagination** for efficient data loading
 - **Real-time UI updates** with optimistic mutations
 - **Validation** on both frontend and backend
-- **Soft delete** for data safety and recovery
 
 ### Additional Documentation
 
@@ -130,7 +129,7 @@ docs/
 | `GET` | `/api/tasks/{id}` | Get a specific task |
 | `PUT` | `/api/tasks/{id}` | Update a task |
 | `PATCH` | `/api/tasks/{id}/status` | Update task status only |
-| `DELETE` | `/api/tasks/{id}` | Delete a task (soft delete) |
+| `DELETE` | `/api/tasks/{id}` | Delete a task |
 
 ### Task Status Values
 
@@ -174,15 +173,11 @@ GET /api/tasks?status=InProgress&sortBy=priority&sortDescending=true&page=1&page
 - **Why**: Handles caching, background refetching, and cache invalidation automatically.
 - **Benefit**: Eliminates manual cache management; provides consistent loading/error states.
 
-### 4. Soft Delete
-- **Why**: Prevents accidental data loss; enables audit trails and data recovery.
-- **Trade-off**: Queries must filter deleted records; storage grows over time.
-
-### 5. Service Result Pattern
+### 4. Service Result Pattern### 4. Service Result Pattern
 - **Why**: Consistent error handling without exceptions for expected failures.
 - **Benefit**: Clear distinction between validation errors, not-found, and system errors.
 
-### 6. JSON String Enums
+### 5. JSON String Enums
 - **Why**: `"InProgress"` is more readable than `1` in API responses.
 - **Benefit**: Self-documenting API; easier debugging; less error-prone integration.
 
@@ -203,7 +198,6 @@ GET /api/tasks?status=InProgress&sortBy=priority&sortDescending=true&page=1&page
 | Decision | Trade-off |
 |----------|-----------|
 | SQLite | Simple setup but limited concurrency; not suitable for high-traffic production |
-| Soft Delete | Data safety but requires query filtering; storage accumulates |
 | Memory Cache | Fast but not distributed; cache invalidation on single instance only |
 | Detailed DTOs | Type safety but more mapping code |
 | Comprehensive Validation | User-friendly errors but validation logic in multiple places |
@@ -238,6 +232,7 @@ GET /api/tasks?status=InProgress&sortBy=priority&sortDescending=true&page=1&page
 - [ ] User-specific task lists
 
 ### Phase 2: Enhanced Features
+- [ ] Soft delete for data safety and recovery
 - [ ] Task categories/tags
 - [ ] Task assignments (assign to users)
 - [ ] Due date reminders/notifications

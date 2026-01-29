@@ -268,7 +268,7 @@ Using this framework reduces boilerplate code because we do not need to implemen
 | `GetTasksFilterTests` | Status filtering, pagination, sorting, empty results |
 | `UpdateTaskTests` | Field updates, partial updates, validation |
 | `UpdateTaskStatusTests` | Valid transitions, invalid transitions, concurrent updates |
-| `DeleteTaskTests` | Soft delete, idempotency, non-existent tasks |
+| `DeleteTaskTests` | Delete operations, idempotency, non-existent tasks |
 | `ValidationTests` | Boundary conditions, error message format |
 
 ### Frontend Tests
@@ -281,7 +281,7 @@ Using this framework reduces boilerplate code because we do not need to implemen
 
 `Tasks.ApiTester` is a console application that can be used to test the APIs within the app.
 
-It can be run using the following commands from the `interview-fh-aep\Tasks.ApiTester\bin\Debug\net10.0` folder:
+It can be run using the following commands from the `tasks\Tasks.ApiTester` folder:
 
 ```bash
 # Default (http://localhost:5211)
@@ -300,7 +300,6 @@ dotnet run --project Tasks.ApiTester http://localhost:5211/api/tasks
 | Decision | Benefit | Trade-off |
 |----------|---------|-----------|
 | **SQLite Database** | Zero configuration, portable, easy setup | Limited concurrency, not suitable for high-traffic production |
-| **Soft Delete** | Data safety, audit trails, recovery capability | Requires query filtering (`IsDeleted`), storage accumulates over time |
 | **Memory Cache** | Fast access, simple implementation | Not distributed; cache invalidation limited to single instance |
 | **Detailed DTOs** | Type safety, layer isolation, clear contracts | More mapping code between layers |
 | **Comprehensive Validation** | User-friendly error messages, data integrity | Validation logic duplicated in frontend and backend |
@@ -316,7 +315,6 @@ dotnet run --project Tasks.ApiTester http://localhost:5211/api/tasks
 - **UTC Only**: All timestamps are stored and returned in UTC; clients must handle timezone conversion
 - **Browser Support**: Requires modern browsers
 - **No Real-time Updates**: Changes from other sources require manual refresh or polling
-- **Soft Delete Accumulation**: Deleted records remain in database indefinitely (no cleanup job)
 
 ### Scalability
 
@@ -351,6 +349,7 @@ dotnet run --project Tasks.ApiTester http://localhost:5211/api/tasks
 - [ ] Role-based access control (RBAC)
 
 #### Phase 2: Enhanced Features
+- [ ] Soft delete for data safety and recovery
 - [ ] Task categories/tags with filtering
 - [ ] Task assignments (assign to other users)
 - [ ] Due date reminders and email notifications
