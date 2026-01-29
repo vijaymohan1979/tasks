@@ -11,7 +11,8 @@ Run all commands using **PowerShell** from the solution root where the `.slnx` f
 ### 1. Navigate to Solution Root
 
 ```powershell
-cd "C:\Code\interviews\interview-fh-aep"
+# Navigate to the solution root directory where the .slnx file is located
+cd <your-solution-path>
 ```
 
 ### 2. Create Initial Migration
@@ -61,7 +62,7 @@ The database file is located at: `Tasks.WebApp/tasks.db`
 ### 1. Create the Vue App
 
 ```powershell
-cd "C:\Code\interviews\interview-fh-aep\Tasks.WebApp"
+cd "<your-solution-path>\Tasks.WebApp"
 npm create vue@latest ClientApp
 ```
 
@@ -79,7 +80,7 @@ The project was created with the following features:
 ### 3. Post-Install Steps
 
 ```powershell
-cd "C:\Code\interviews\interview-fh-aep\Tasks.WebApp\ClientApp"
+cd "<your-solution-path>\Tasks.WebApp\ClientApp"
 npm install
 npm run format
 ```

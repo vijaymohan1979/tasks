@@ -123,7 +123,7 @@ Handle the following states clearly:
 - **Consistent Formatting**: Standard code style across all projects
 - **XML Documentation**: Public APIs documented with `<summary>` comments
 - **Error Handling**: Explicit error types with `ServiceResult<T>` pattern
-- **Immutability**: DTOs as records where possible; readonly collections
+- **Immutability**: Prefer readonly collections; consider records for future refactoring
 - **Dependency Injection**: All dependencies injected via constructor
 - **Guard Clauses**: Early validation with `ArgumentNullException.ThrowIfNull()`
 
@@ -273,9 +273,9 @@ Using this framework reduces boilerplate code because we do not need to implemen
 
 ### Frontend Tests
 
-- Component rendering tests (TaskCard, TaskForm, TaskFilter)
+- Component rendering tests (TaskForm, TaskFilter)
 - Vue Query composable tests (useTasks)
-- API service layer tests (taskApi)
+- Application component tests (App)
 
 ### Running the API Tester
 

@@ -77,7 +77,7 @@ The application follows a **layered architecture** with clear separation of conc
 ### Backend
 - **.NET 10** / **ASP.NET Core Web API**
 - **Entity Framework Core** with SQLite
-- **FluentValidation** patterns for model validation
+- **Data Annotations** with custom validators for model validation
 - **Swagger/OpenAPI** for API documentation
 - **Memory Cache** for query count optimization
 
