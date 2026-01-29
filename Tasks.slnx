@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/docs/">
+    <File Path="docs/initial-setup.md" />
+    <File Path="docs/startup.md" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Tasks.ApiTester/Tasks.ApiTester.csproj" Id="77413151-e8df-4f0d-b9e9-72694fa2b443" />
+  <Project Path="Tasks.Data.Access/Tasks.Data.Access.csproj" Id="6e1bbf4b-979f-40c9-90e8-07f7fb55f903" />
+  <Project Path="Tasks.Data/Tasks.Data.csproj" />
+  <Project Path="Tasks.Models/Tasks.Models.csproj" Id="4cc36600-36f2-4962-8ba3-e3bbd4667147" />
+  <Project Path="Tasks.Services/Tasks.Services.csproj" Id="816a38f3-1701-41fe-a1d5-485afa8700a0" />
+  <Project Path="Tasks.WebApp/Tasks.WebApp.csproj" />
+</Solution>

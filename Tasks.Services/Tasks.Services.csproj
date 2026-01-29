@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tasks.Data.Access\Tasks.Data.Access.csproj" />
+    <ProjectReference Include="..\Tasks.Models\Tasks.Models.csproj" />
+  </ItemGroup>
+
+</Project>
