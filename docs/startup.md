@@ -69,7 +69,6 @@ npm --version
 
 ```bash
 git clone https://github.com/vijaymohan1979/tasks.git
-cd tasks
 ```
 
 ### 2. Restore Backend Dependencies
